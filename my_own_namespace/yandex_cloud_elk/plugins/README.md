@@ -1,31 +1,28 @@
-# Collections Plugins Directory
+DOCUMENTATION = r'''
+---
+module: my_own_module
 
-This directory can be used to ship various plugins inside an Ansible collection. Each plugin is placed in a folder that
-is named after the type of plugin it is in. It can also include the `module_utils` and `modules` directory that
-would contain module utils and modules respectively.
+short_description: Create text files on remote hosts
 
-Here is an example directory of the majority of plugins currently supported by Ansible:
+version_added: "1.0.0"
 
-```
-└── plugins
-    ├── action
-    ├── become
-    ├── cache
-    ├── callback
-    ├── cliconf
-    ├── connection
-    ├── filter
-    ├── httpapi
-    ├── inventory
-    ├── lookup
-    ├── module_utils
-    ├── modules
-    ├── netconf
-    ├── shell
-    ├── strategy
-    ├── terminal
-    ├── test
-    └── vars
-```
+description:
+  - Creates text files with specified content.
+  - Supports idempotent execution.
 
-A full list of plugin types can be found at [Working With Plugins](https://docs.ansible.com/ansible-core/2.16/plugins/plugins.html).
+options:
+  path:
+    description:
+      - Target file path.
+    required: true
+    type: str
+
+  content:
+    description:
+      - File content.
+    required: true
+    type: str
+
+author:
+  - ppg
+'''

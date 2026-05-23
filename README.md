@@ -203,3 +203,6 @@ if __name__ == '__main__':
 Запуск playbook
 ![скриншот](pic/5.png)
 
+[ССылка на tar.gz архив](final_test/my_own_namespace-yandex_cloud_elk-1.0.0.tar.gz)
+
+[ССылка на collection](my_own_namespace/yandex_cloud_elk)
