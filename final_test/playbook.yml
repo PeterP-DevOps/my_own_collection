@@ -1,0 +1,13 @@
+---
+- name: Test create_file role
+  hosts: local
+  gather_facts: false
+
+  collections:
+    - my_own_namespace.yandex_cloud_elk
+
+  roles:
+    - role: create_file
+      vars:
+        file_path: "/tmp/collection_test.txt"
+        file_content: "Hello from collection role"
